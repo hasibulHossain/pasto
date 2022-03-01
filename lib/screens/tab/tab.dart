@@ -17,7 +17,7 @@ class _TabsScreenState extends State<TabsScreen> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Meals'),
+          title: const Text('Pasto'),
           bottom: const TabBar(
             tabs: <Widget>[
               Tab(icon: Icon(Icons.category), text: 'categories'),
@@ -27,7 +27,7 @@ class _TabsScreenState extends State<TabsScreen> {
         ),
         body: const TabBarView(
           children: <Widget>[
-            HomePage(title: 'Categories'),
+            HomePage(),
             Favorites(),
           ],
         ),
