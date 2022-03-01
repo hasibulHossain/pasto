@@ -15,10 +15,6 @@ class CustomScaffold extends StatelessWidget {
       ),
       body: Container(
         child: body,
-        padding: const EdgeInsets.only(
-          right: 10,
-          left: 10,
-        ),
       ),
     );
   }

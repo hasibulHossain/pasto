@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import './screens/homepage.dart';
+import './screens/tab/tab.dart';
 import './screens/category_details/category_details.dart';
+import './screens/meal_details/meal_details.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,9 +35,16 @@ class MyApp extends StatelessWidget {
       // home: const HomePage(title: 'My meal'),
       initialRoute: '/', // default is '/'
       routes: {
-        '/': (context) => const HomePage(title: 'My meal'),
-        CategoryDetails.route: (context) => const CategoryDetails()
+        '/': (context) => const TabsScreen(),
+        CategoryDetails.route: (context) => const CategoryDetails(),
+        MealDetails.route: (context) => const MealDetails(),
       },
+      // onGenerateRoute: (settings) {
+      //   //on generate route will call if none of the route match with routes. then this fallback screen will show.
+      //   return MaterialPageRoute(
+      //     builder: (context) => const TabsScreen(),
+      //   );
+      // },
     );
   }
 }
