@@ -3,6 +3,7 @@ import 'package:meals_app/components/category_item/category_item.dart';
 
 import '../data/dummy_data.dart';
 import '../components/category_item/category_item.dart';
+import '../layout/custom_scaffold.dart';
 
 class HomePage extends StatelessWidget {
   final String title;
@@ -11,12 +12,12 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
+    return CustomScaffold(
+      title: title,
       body: GridView(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.only(
+          top: 20,
+        ),
         children: categories
             .map(
               (category) => CategoryItem(

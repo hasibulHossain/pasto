@@ -11,6 +11,7 @@ class CategoryItem extends StatelessWidget {
       : super(key: key);
 
   void selectCategoryHandler(BuildContext ctx) {
+    // pass essential argument along with route navigator
     Navigator.of(ctx).pushNamed(
       CategoryDetails.route,
       arguments: {
@@ -23,8 +24,6 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
-      
       // color: Colors.blue,
       child: InkWell(
         onTap: () => selectCategoryHandler(context),

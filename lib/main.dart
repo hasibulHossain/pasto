@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
             ),
       ),
       // home: const HomePage(title: 'My meal'),
-      initialRoute: '/', // default is /
+      initialRoute: '/', // default is '/'
       routes: {
         '/': (context) => const HomePage(title: 'My meal'),
         CategoryDetails.route: (context) => const CategoryDetails()
