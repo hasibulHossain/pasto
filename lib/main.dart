@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import './screens/tab/tab.dart';
 import './screens/category_details/category_details.dart';
 import './screens/meal_details/meal_details.dart';
+import './screens/filter/filter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const TabsScreen(),
         CategoryDetails.route: (context) => const CategoryDetails(),
         MealDetails.route: (context) => const MealDetails(),
+        Filter.route: (context) => const Filter(),
       },
       // onGenerateRoute: (settings) {
       //   //on generate route will call if none of the route match with routes. then this fallback screen will show.

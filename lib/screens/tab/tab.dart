@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../homepage.dart';
 import '../favorites/favorites.dart';
+import '../../components/drawer/main_drawer.dart';
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({Key? key}) : super(key: key);
@@ -29,6 +30,9 @@ class _TabsScreenState extends State<TabsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Pasto'),
+      ),
+      drawer: const Drawer(
+        child: MainDrawer(),
       ),
       body: _pages[_selectedPageIndex],
       bottomNavigationBar: BottomNavigationBar(
