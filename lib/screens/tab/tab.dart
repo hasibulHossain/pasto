@@ -26,35 +26,32 @@ class _TabsScreenState extends State<TabsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Pasto'),
-        ),
-        body: _pages[_selectedPageIndex],
-        bottomNavigationBar: BottomNavigationBar(
-          onTap: _selectPage,
-          backgroundColor: Theme.of(context).colorScheme.primary,
-          unselectedItemColor: Colors.white,
-          selectedItemColor: Theme.of(context).colorScheme.secondary,
-          currentIndex: _selectedPageIndex,
-          items: const [
-            BottomNavigationBarItem(
-              activeIcon: Icon(Icons.settings),
-              icon: Icon(
-                Icons.category,
-              ),
-              label: 'Categories',
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Pasto'),
+      ),
+      body: _pages[_selectedPageIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: _selectPage,
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        unselectedItemColor: Colors.white,
+        selectedItemColor: Theme.of(context).colorScheme.secondary,
+        currentIndex: _selectedPageIndex,
+        items: const [
+          BottomNavigationBarItem(
+            activeIcon: Icon(Icons.settings),
+            icon: Icon(
+              Icons.category,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.star,
-              ),
-              label: 'Favorites',
+            label: 'Categories',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.star,
             ),
-          ],
-        ),
+            label: 'Favorites',
+          ),
+        ],
       ),
     );
   }
