@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
       title: 'My meal',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.amber,
+          primarySwatch: Colors.pink
         ).copyWith(
-          secondary: Colors.pink,
+          secondary: Colors.yellow,
         ),
         canvasColor: const Color.fromRGBO(255, 254, 229, 1),
         textTheme: ThemeData.light().textTheme.copyWith(

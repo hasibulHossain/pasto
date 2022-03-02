@@ -11,7 +11,7 @@ class TabsScreen extends StatefulWidget {
 }
 
 class _TabsScreenState extends State<TabsScreen> {
-  int selectedPageIndex = 0;
+  int _selectedPageIndex = 0;
 
   final List<Widget> _pages = const [
     HomePage(),
@@ -20,7 +20,7 @@ class _TabsScreenState extends State<TabsScreen> {
 
   void _selectPage(int index) {
     setState(() {
-      selectedPageIndex = index;
+      _selectedPageIndex = index;
     });
   }
 
@@ -28,17 +28,20 @@ class _TabsScreenState extends State<TabsScreen> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 2,
-      initialIndex: 1,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Pasto'),
         ),
-        body: _pages[selectedPageIndex],
+        body: _pages[_selectedPageIndex],
         bottomNavigationBar: BottomNavigationBar(
           onTap: _selectPage,
-          backgroundColor: Theme.of(context).primaryColor,
+          backgroundColor: Theme.of(context).colorScheme.primary,
+          unselectedItemColor: Colors.white,
+          selectedItemColor: Theme.of(context).colorScheme.secondary,
+          currentIndex: _selectedPageIndex,
           items: const [
             BottomNavigationBarItem(
+              activeIcon: Icon(Icons.settings),
               icon: Icon(
                 Icons.category,
               ),
