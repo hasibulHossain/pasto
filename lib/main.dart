@@ -31,6 +31,11 @@ class MyApp extends StatelessWidget {
               bodyText2: const TextStyle(
                 color: Color.fromRGBO(20, 51, 51, 1),
               ),
+              headline5: const TextStyle(
+                color: Colors.black87,
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              )
             ),
       ),
       // home: const HomePage(title: 'My meal'),

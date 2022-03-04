@@ -25,8 +25,12 @@ class MealDetails extends StatelessWidget {
     final mealTitle = mealArgument['title'] as String;
     final selectedMeal = meals.firstWhere((element) => element.id == mealId);
 
-    return CustomScaffold(
-      title: mealTitle,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          mealTitle,
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -96,6 +100,14 @@ class MealDetails extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(
+          Icons.delete,
+        ),
+        onPressed: () {
+          Navigator.of(context).pop(mealId);
+        },
       ),
     );
   }
